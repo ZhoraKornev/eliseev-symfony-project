@@ -96,7 +96,7 @@ services:
         volumes:
             - ./storage:/app
         ports:
-            - "8081:80"
+            - "9645:80"
     storage-ftp:
         image: stilliard/pure-ftpd
         environment:
