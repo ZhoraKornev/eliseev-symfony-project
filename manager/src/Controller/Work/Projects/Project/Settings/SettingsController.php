@@ -62,7 +62,7 @@ class SettingsController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             try {
                 $handler->handle($command);
-                return $this->redirectToRoute('work.projects.project.show', ['project_id' => $project->getId()]);
+                return $this->redirectToRoute('work.projects.project.show', ['id' => $project->getId()]);
             } catch (\DomainException $e) {
                 $this->errors->handle($e);
                 $this->addFlash('error', $e->getMessage());
